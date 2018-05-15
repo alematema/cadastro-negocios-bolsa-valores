@@ -17,20 +17,21 @@ class NegociacoesView {
 								</thead>
 
 								<tbody>
-									${model.all.map( negociacao => 
-			
-											 `<tr>
+									${model.all.map( negociacao => `
+
+													<tr>
 														<td>${DateHelper.toText(negociacao.data)}</td>
 														<td>${negociacao.quantidade}</td>
 														<td>${negociacao.valor}</td>
 														<td>${negociacao.volume}</td>
 													</tr>	
-											`;
-			
-									).join('')}
+ 
+										`).join('')}
 								</tbody>
 
 								<tfoot>
+										<td colspan='3'></td>
+										<td>${model.totalVolume}</td>
 								</tfoot>
 				    </table> `;
 	};
