@@ -1,8 +1,9 @@
 class DateHelper {
 
 	
+	
 	constructor(){
-		throw new Error('Esta classe não pode ser instaciada !!!');
+		throw new Error('Classe DateHelper não pode ser instanciada !!!');
 	}
 
 	static toDate(texto) {
@@ -11,11 +12,7 @@ class DateHelper {
 
 
 	static toText(data) {
-		let diaMesAno = data.getDate() +
-			'/' + (data.getMonth() < 9 ? '0' + (data.getMonth() + 1) : data.getMonth() + 1) +
-			'/' + data.getFullYear();
-
-		return diaMesAno;
+		return `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
 	}
 
 
