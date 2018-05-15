@@ -16,10 +16,6 @@ class NegociacaoController {
 		
 		this._negociacoes.add(this._newNegociacao());
 		
-		console.log(this._negociacoes.all);
-		
-		let diaMesAno = DateHelper.toText(negociacao.data);
-		
 		this._resetForm();
 		
 	};
