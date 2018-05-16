@@ -1,16 +1,18 @@
 class ListaNegociacoes {
 
-	constructor() {
+	constructor(proxy) {
 		this._negociacoes = [];
+		this._proxy = proxy;
 	}
-
 
 	add(negociacao) {
 		this._negociacoes.push(negociacao);
+		this._proxy(this);
 	}
 	
 	esvazia() {
 		this._negociacoes = [];
+		this._proxy(this);
 	}
 
 	get all() {
