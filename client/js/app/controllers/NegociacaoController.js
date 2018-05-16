@@ -19,12 +19,24 @@ class NegociacaoController {
 		event.preventDefault();
 
 		this._negociacoes.add(this._newNegociacao());
+		this._negociacoesView.update(this._negociacoes); 
+		
 		this._mensagem.texto = 'Negociação adicionada com sucesso'
 		this._mensagemView.update(this._mensagem);
-		this._negociacoesView.update(this._negociacoes); 
+		
 		this._resetForm();
 
 	};
+	
+	apaga(){
+		
+		this._negociacoes.esvazia();
+		this._negociacoesView.update(this._negociacoes);
+		
+		this._mensagem.texto = 'Negociações apagadas com sucesso !!!';
+		this._mensagemView.update(this._mensagem);
+		
+	}
 
 	_newNegociacao() {
 
