@@ -1,6 +1,6 @@
 class Bind {
 
-	constructor(model, view, props) {
+	constructor(model, view, ...props) {
 		
 		console.log(`binding ${model} com ${view}`);
 

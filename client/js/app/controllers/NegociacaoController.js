@@ -10,8 +10,8 @@ class NegociacaoController {
 		this._negociacoesView = new NegociacoesView($('#negociacoes-view'));
 		this._mensagemView = new MensagemView($('#mensagem-view'));
 		
-		this._negociacoes = new Bind(new ListaNegociacoes(),this._negociacoesView,['add','esvazia']);
-		this._mensagem = new Bind(new Mensagem(), this._mensagemView,['texto']);
+		this._negociacoes = new Bind(new ListaNegociacoes(),this._negociacoesView,'add','esvazia');
+		this._mensagem = new Bind(new Mensagem(), this._mensagemView,'texto');
 
 	};
 
