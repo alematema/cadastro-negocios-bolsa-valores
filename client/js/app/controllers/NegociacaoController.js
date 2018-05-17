@@ -6,12 +6,14 @@ class NegociacaoController {
 		this._inputData = $('#data');
 		this._inputQuantidade = $('#quantidade');
 		this._inputValor = $('#valor');
+			
+		this._negociacoes = new Bind(new ListaNegociacoes(),
+																 new NegociacoesView($('#negociacoes-view')),
+																 'add','esvazia');
 		
-		this._negociacoesView = new NegociacoesView($('#negociacoes-view'));
-		this._mensagemView = new MensagemView($('#mensagem-view'));
-		
-		this._negociacoes = new Bind(new ListaNegociacoes(),this._negociacoesView,'add','esvazia');
-		this._mensagem = new Bind(new Mensagem(), this._mensagemView,'texto');
+		this._mensagem = new Bind(new Mensagem(),
+															new MensagemView($('#mensagem-view')),
+															'texto');
 
 	};
 
