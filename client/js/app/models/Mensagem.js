@@ -14,5 +14,9 @@ class Mensagem {
 		this._texto = texto;
 	}
 	
+	toString(){
+		return '[object Mensagem]'
+	}
+	
 }
  

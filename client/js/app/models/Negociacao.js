@@ -15,4 +15,8 @@ class Negociacao {
 		return this._quantidade * this._valor;
 	}
 	
+	toString(){
+		return '[object Negociacao]';
+	}
+	
 }

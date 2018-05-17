@@ -31,6 +31,10 @@ class NegociacoesView extends View {
 								</tfoot>
 				    </table> `;
 	};
+	
+	toString(){
+		return '[object NegociacoesView]';
+	}
 
 
 }

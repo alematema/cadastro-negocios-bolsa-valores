@@ -21,4 +21,8 @@ class ListaNegociacoes {
 		return this._negociacoes.reduce((totalVolume,negociacao) => totalVolume+negociacao.volume,0.0);
 	}
 
+	
+	toString(){
+		return '[object ListaNegociacoes]'
+	}
 }
